@@ -20,3 +20,28 @@ $ git clone https://github.com/OluwaninsolaAO/restapi-with-expressjs
 $ cd restapi-with-expressjs
 $ npm install
 ```
+
+#### Start Server
+```
+$ npm start
+> restapi@1.0.0 start /home/oluwaninsolaao/git/restapi
+> node ./index.js
+
+Server started on port 8888
+```
+
+#### Test API (while the server is running on another terminal session)
+```
+$ curl -si 0:8888/hello/World
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Access-Control-Allow-Origin: *
+Content-Type: application/json; charset=utf-8
+Content-Length: 26
+ETag: W/"1a-iEQ9RXvkycqsT4vWvcdHrxZT8OE"
+Date: Sat, 29 Apr 2023 13:53:08 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+{"message":"Hello World!"}
+```
